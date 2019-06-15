@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <div>
+        countNumber
+        <input type="text" id="countValue">
+    </div>
+    <button type="button" onclick="generate()">
+        Click me
+    </button>
+    <div id="target"></div>
+</form>
+
+<script>
+    function generate() {
+        var countNumber = document.getElementById("countValue").value;
+        var content = '';
+        for ( var i = 0; i <= countNumber; i++) {
+            content += "<p>" + i + "</p>"
+        }
+        document.getElementById("target").innerHTML = content;
+    }
+</script>
+</body>
+</html>

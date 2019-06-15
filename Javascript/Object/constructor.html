@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function student(name, age, location) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.location = location;
+    }
+    var student1 = new student("Hung", "Nguyen", 18, "Thai Binh")
+    console.log(student1);
+
+    //add nationality to object student1
+    /*student1.nationality = "Vietnam";
+    console.log(student1);*/
+
+    //add method to object student1
+    student1.name = function() {
+       return this.name = this.firstName + this.lastName;
+    }
+
+    console.log("The name of student1 is: "+ student1.name())
+</script>
+</body>
+</html>

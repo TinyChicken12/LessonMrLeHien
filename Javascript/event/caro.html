@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        td {
+            border : 1px solid black;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+      <select id="select-cell">
+      </select>
+        <button type="button" onclick="start()">Play</button>
+    </form>
+    <table>
+        <tbody id="playground">
+
+        </tbody>
+    </table>
+
+<script>
+    var selectTag= document.getElementById("select-cell");
+    var tbodyTag = document.getElementById("playground");
+    var option = "";
+    for (var i =1 ; i<= 30; i++) {
+        option += "<option value=" + i + " > " + i + " </option> ";
+    }
+    selectTag.innerHTML = option;
+
+    function start() {
+        var tbodyContent ='';
+        var playgroundSize = selectTag.value;
+        for (var i = 0; i < playgroundSize; i++){
+                tbodyContent += "<tr>";
+                for(var j = 0; j < playgroundSize; j++){
+                    tbodyContent += "<td x="+ j + "y ="+  i + "></td>";
+                }
+                tbodyContent += "</tr>";
+        }
+        tbodyTag.innerHTML = tbodyContent;
+    }
+</script>
+</body>
+</html>

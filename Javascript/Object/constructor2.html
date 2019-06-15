@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Car (model, speed, country) {
+        this.model = model;
+        this.speed = speed;
+        this.country = country;
+    }
+
+    var car1 = new Car("Mercedes", "240 km/h", "Gernamny");
+    console.log(car1);
+
+    //Add property to car1
+    car1.color = "red";
+    console.log(car1);
+
+    //add method to car1
+    car1.run = function() {
+        return "forward or backward";
+    }
+    console.log(car1);
+</script>
+</body>
+</html>
